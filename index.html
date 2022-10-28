@@ -8,6 +8,39 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="frame">
+      <h1 class="h1">TEAM GENERATOR</h1>
+      <div class="main flexR just-sp-bw">
+        <div class="main-leftC flexC">
+          <!-- style="border: 2px solid green" -->
+          <div class="main-leftC-top flexR just-sp-bw">
+            <div class="main-leftC-tL">
+              <span class="add-member bold flexC"
+                >Add member
+                <div class="flexR">
+                  <input id="input-field" type="text" placeholder="Name" />
+                  <button class="blue-buttons" id="input-button">Add</button>
+                </div>
+              </span>
+            </div>
+            <div class="main-leftC-tR">
+              <span class="bold flexC"
+                >Teams
+                <div class="flexR just-sp-bw">
+                  <button class="blue-buttons" id="minus-button">-</button>
+                  <span id="number-teams"></span>
+                  <button class="blue-buttons" id="plus-button">+</button>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div class="main-leftC-bottom">
+            <ul class="flexC" id="membersList"></ul>
+          </div>
+        </div>
+        <div class="main-rightC" style="border: 2px solid red">TEAMS</div>
+      </div>
+    </div>
     <script src="./new.js"></script>
   </body>
 </html>

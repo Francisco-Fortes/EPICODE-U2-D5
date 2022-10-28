@@ -1,3 +1,140 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@500;700&family=Yellowtail&display=swap");
+
+:root {
+  --color-primary: #7eb693;
+  --color-primary-light: #eff6f1;
+  --color-secondary: #efd372;
+  --color-dark: #274c5b;
+  --color-light: #f9f8f8;
+  --body-font: "Open Sans", sans-serif;
+  --sans-serif: "Roboto", sans-serif;
+  --cursive: "Yellowtail", cursive;
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  color: red;
+  margin: 0;
+
+  /* background-color: #f8f9fa; */
+}
+
+.frame {
+  background-color: #f8f9fa;
+  /* border: 2px solid orange; */
+  width: 70%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.flexR {
+  display: flex;
+}
+
+.flexC {
+  display: flex;
+  flex-direction: column;
+}
+
+.just-sp-c {
+  justify-content: center;
+}
+
+.just-sp-bw {
+  justify-content: space-between;
+}
+
+.just-sp-ad {
+  justify-content: space-around;
+}
+
+.alig-sp-bw {
+  align-content: space-between;
+}
+
+.g10 {
+  gap: 10px;
+}
+
+.main {
+  width: 100%;
+}
+
+.main-leftC {
+  width: 48%;
+}
+
+.main-leftC-tL {
+  width: 80;
+}
+
+.add-member input,
+.add-member button {
+  margin-top: 5px;
+}
+
+.add-member input {
+  padding-left: 5px;
+  height: 25px;
+  border-color: #ebebec;
+  border-width: 0.05px;
+  border-style: solid;
+  border-radius: 3px;
+}
+
+.main-leftC-tR > span button,
+.main-leftC-tR > span span {
+  margin-top: 5px;
+}
+
+.main-leftC-tR {
+  width: 32%;
+  height: 60px;
+}
+
+.main-rightC {
+  width: 48%;
+}
+
+.main-leftC-bottom {
+  /* border: 2px solid pink; */
+  height: 200px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.blue-buttons {
+  color: white;
+  background-color: #697cf7;
+  border-radius: 3px;
+  border-color: #697cf7;
+  border-style: none;
+  height: 25px;
+}
+
+ul {
+  border-color: #ebebec;
+  border-width: 1px;
+  list-style: none;
+  padding-top: 5px;
+  margin: 0;
+  /* padding: 0px, 0px, 0px, 0px; */
+  padding-left: 0px;
+  box-shadow: inset 0 7px 5px -7px rgba(0, 0, 0, 0.6);
+}
+
+.nameList {
+  border-bottom: solid;
+  border-color: #ebebec;
+  border-width: 1px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-left: 5px;
 }
