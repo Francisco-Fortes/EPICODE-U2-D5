@@ -1,6 +1,6 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@500;700&family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap");
 
-:root {
+/* :root {
   --color-primary: #7eb693;
   --color-primary-light: #eff6f1;
   --color-secondary: #efd372;
@@ -11,7 +11,7 @@
   --cursive: "Yellowtail", cursive;
 } */
 
-*,
+*/ *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -19,8 +19,8 @@
 
 body {
   margin: 0;
-
-  /* background-color: #f8f9fa; */
+  background-color: #f8f9fa;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .frame {
@@ -29,6 +29,10 @@ body {
   width: 70%;
   margin: auto;
   margin-top: 5%;
+}
+
+h1 {
+  font-weight: 200;
 }
 
 .flexR {
@@ -110,7 +114,7 @@ body {
 }
 
 .blue-buttons {
-  color: white;
+  color: #e1e2f8;
   background-color: #697cf7;
   border-radius: 3px;
   border-color: #697cf7;
@@ -118,15 +122,25 @@ body {
   height: 25px;
 }
 
-ul {
+#membersList {
+  background-color: white;
+  min-height: 50px;
+  height: fit-content;
+  max-height: 300px;
   border-color: #ebebec;
   border-width: 1px;
   list-style: none;
   padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
   margin: 0;
   /* padding: 0px, 0px, 0px, 0px; */
   padding-left: 0px;
-  box-shadow: inset 0 7px 5px -7px rgba(0, 0, 0, 0.6);
+  border-style: solid;
+  box-shadow: inset 0 7px 6px -7px rgba(0, 0, 0, 0.281);
+  /* min-height: 279px; */
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 .nameList {
@@ -137,4 +151,71 @@ ul {
   padding-bottom: 10px;
   padding-top: 10px;
   margin-left: 5px;
+}
+
+#membersList > li:nth-child(7n) {
+  border-bottom: none;
+  border-color: #ebebec;
+  border-width: 1px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-left: 5px;
+}
+
+#membersList > li:nth-child(7n + 1) {
+  border-bottom: none;
+  border-color: #ebebec;
+  border-width: 1px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-left: 5px;
+}
+
+#membersList > li:nth-child(7n + 2) {
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #ebebec;
+  border-width: 1px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-left: 5px;
+}
+
+/* #membersList > li:nth-child(8n -1) {
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #ebebec;
+    border-width: 1px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 5px;
+  } */
+
+#assign-button {
+  width: 84%;
+}
+
+#reset-button {
+  width: 14%;
+  padding: 2px;
+  color: #e1e2f8;
+  background-color: #9d4547;
+  border-radius: 3px;
+  border-color: #9d4547;
+  border-style: none;
+  height: 25px;
+}
+
+.team-list {
+  width: 100px;
+  min-height: 200px;
+  border-radius: 3px;
+  border-width: 1px;
+  background-color: white;
+  border-color: #ebebec;
+  border-style: solid;
 }

@@ -5,7 +5,10 @@ const nodeMinusButton = document.getElementById("minus-button");
 const nodePlusButton = document.getElementById("plus-button");
 const numberOfTeams = document.getElementById("number-teams");
 let number = 0;
-const nodeTeamLists = document.getElementById("");
+const nodeTeamLists = document.getElementById("team-lists");
+const nodeAssignButton = document.getElementById("assign-button");
+const nodeResetButton = document.getElementById("reset-button");
+
 //Li created when user clicks on Add button with the input field value
 nodeInputButton.addEventListener("click", function () {
   let newLi = document.createElement("li");
@@ -36,3 +39,12 @@ nodeMinusButton.addEventListener("click", function () {
 });
 
 //Number of teams created according to the number on the span
+
+nodeAssignButton.addEventListener("click", function () {
+  let newUl = document.createElement("ul");
+  for (let i = 0; i < number; i++) {
+    newUl.innerText = "Team" + number;
+    nodeTeamLists.append(newUl);
+    newUl.classList.add("team-list");
+  }
+});
