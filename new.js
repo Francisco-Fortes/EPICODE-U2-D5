@@ -40,6 +40,11 @@ nodePlusButton.addEventListener("click", function () {
 //Substracting 1 to the total number of Teams
 nodeMinusButton.addEventListener("click", function () {
   number -= 1;
+  if (number <= 0) {
+    number += 1;
+  } else if (number <= 1) {
+    alert("Minimum number of Teams is 1.");
+  }
   numberOfTeams.innerText = number;
   for (let i = 0; i < number; i++) {
     nodeTeamLists.removeChild(nodeTeamLists.children[number]);
@@ -50,29 +55,16 @@ nodeMinusButton.addEventListener("click", function () {
 });
 
 nodeAssignButton.addEventListener("click", function () {
-  for (let i = 0; i < names.length; i++) {
-    nodeTeamList[i].appendChild(names[i]);
-    console.log(names[i]);
+  if (number === 0) {
+    alert("Please select a number of teams");
+  } else if (names.length <= 0) {
+    alert("Please add members to the list and press this button again");
+  } else {
+    for (let i = 0; i < names.length; i++) {
+      nodeTeamList[i].appendChild(names[i]);
+      //How can I set up the actual min-Height according to the numbers on <li> that are created
+      nodeUl.style.minHeight = "300px";
+      nodeUl.removeChild(names);
+    }
   }
 });
-// nodeAssignButton.addEventListener("click", function () {
-//   let newUl = document.createElement("ul");
-//   for (let i = 0; i < number; i++) {
-//     newUl.innerHTML = "Team" + i;
-//     nodeTeamLists.append(newUl);
-//     newUl.classList.add("team-list");
-//   }
-//   //This console.log shows an array with all the lis
-//   console.log(names);
-// });
-
-//I WAS NOT CREATING THE TEAMS THATS WHY IT WAS NOT WORKING
-// const teamBoard = document.getElementsByClassName("team-list");
-
-// nodeAssignButton.addEventListener("click", function () {
-//   for (let i = 0; i < names.length; i++) {
-//     teamBoard.appendChild(names[i]);
-//     // console.log(nodeUl);
-//     console.log(names[i]);
-//   }
-// });

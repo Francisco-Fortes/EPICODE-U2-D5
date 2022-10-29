@@ -216,6 +216,7 @@ h1 {
 }
 
 .team-list {
+  list-style: none;
   margin: auto;
   width: 100px;
   min-height: 200px;
@@ -224,6 +225,11 @@ h1 {
   background-color: white;
   border-color: #ebebec;
   border-style: solid;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-left: 5px;
+  padding-right: 5px;
 }
 
 #bold {
