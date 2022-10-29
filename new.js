@@ -8,7 +8,8 @@ let number = 0;
 const nodeTeamLists = document.getElementById("team-lists");
 const nodeAssignButton = document.getElementById("assign-button");
 const nodeResetButton = document.getElementById("reset-button");
-
+const names = document.getElementsByClassName("nameList");
+const nodeTeamList = document.getElementsByClassName("team-list");
 //Li created when user clicks on Add button with the input field value
 nodeInputButton.addEventListener("click", function () {
   let newLi = document.createElement("li");
@@ -26,25 +27,52 @@ nodeInputButton.addEventListener("click", function () {
 nodePlusButton.addEventListener("click", function () {
   number += 1;
   numberOfTeams.innerText = number;
+  let newUl = document.createElement("ul");
+  if (number >= 1) {
+    for (let i = 0; i < number; i++) {
+      newUl.innerText = "Team " + number;
+      nodeTeamLists.append(newUl);
+      newUl.classList.add("team-list");
+    }
+  }
 });
 
 //Substracting 1 to the total number of Teams
 nodeMinusButton.addEventListener("click", function () {
   number -= 1;
-  //   if (numberOfTeams.number < 0) {
-  //     alert("Numbers of teams cannot be less than 1");
-  //   } else {
   numberOfTeams.innerText = number;
-  //   }
-});
-
-//Number of teams created according to the number on the span
-
-nodeAssignButton.addEventListener("click", function () {
-  let newUl = document.createElement("ul");
   for (let i = 0; i < number; i++) {
-    newUl.innerText = "Team" + number;
-    nodeTeamLists.append(newUl);
-    newUl.classList.add("team-list");
+    nodeTeamLists.removeChild(nodeTeamLists.children[number]);
+  }
+  if (number < 1) {
+    alert("Minimum number of Teams is 1.");
   }
 });
+
+nodeAssignButton.addEventListener("click", function () {
+  for (let i = 0; i < names.length; i++) {
+    nodeTeamList[i].appendChild(names[i]);
+    console.log(names[i]);
+  }
+});
+// nodeAssignButton.addEventListener("click", function () {
+//   let newUl = document.createElement("ul");
+//   for (let i = 0; i < number; i++) {
+//     newUl.innerHTML = "Team" + i;
+//     nodeTeamLists.append(newUl);
+//     newUl.classList.add("team-list");
+//   }
+//   //This console.log shows an array with all the lis
+//   console.log(names);
+// });
+
+//I WAS NOT CREATING THE TEAMS THATS WHY IT WAS NOT WORKING
+// const teamBoard = document.getElementsByClassName("team-list");
+
+// nodeAssignButton.addEventListener("click", function () {
+//   for (let i = 0; i < names.length; i++) {
+//     teamBoard.appendChild(names[i]);
+//     // console.log(nodeUl);
+//     console.log(names[i]);
+//   }
+// });

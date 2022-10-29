@@ -151,6 +151,7 @@ h1 {
   padding-bottom: 10px;
   padding-top: 10px;
   margin-left: 5px;
+  font-size: 14px;
 }
 
 #membersList > li:nth-child(7n) {
@@ -210,7 +211,12 @@ h1 {
   height: 25px;
 }
 
+#team-lists {
+  max-width: 400px;
+}
+
 .team-list {
+  margin: auto;
   width: 100px;
   min-height: 200px;
   border-radius: 3px;
@@ -218,4 +224,8 @@ h1 {
   background-color: white;
   border-color: #ebebec;
   border-style: solid;
+}
+
+#bold {
+  font-weight: bold;
 }
