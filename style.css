@@ -141,6 +141,7 @@ h1 {
   /* min-height: 279px; */
   flex-wrap: wrap;
   margin-bottom: 10px;
+  /* overflow-x: scroll;  */
 }
 
 .nameList {
@@ -152,6 +153,7 @@ h1 {
   padding-top: 10px;
   margin-left: 5px;
   font-size: 14px;
+  /* WIP: Flex Shrink on Parent or Item */
 }
 
 #membersList > li:nth-child(7n) {
@@ -235,3 +237,12 @@ h1 {
 #bold {
   font-weight: bold;
 }
+
+/* .divForUl {
+  width: 200px;
+  height: 400px;
+}
+
+.spanForUl {
+  font-weight: bold;
+} */
