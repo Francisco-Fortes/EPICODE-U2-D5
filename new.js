@@ -10,7 +10,7 @@ const nodeAssignButton = document.getElementById("assign-button");
 const nodeResetButton = document.getElementById("reset-button");
 const names = document.getElementsByClassName("nameList");
 const nodeTeamList = document.getElementsByClassName("team-list");
-
+const arrayOfTeams = document.querySelectorAll("main-rightC > ul");
 //Li created when user clicks on Add button with the input field value
 nodeInputButton.addEventListener("click", function () {
   let newLi = document.createElement("li");
@@ -21,6 +21,7 @@ nodeInputButton.addEventListener("click", function () {
     alert("Please type something in the box");
   } else {
     nodeUl.appendChild(newLi);
+    //Emptying the Input field
     nodeInput.value = "";
   }
 });
@@ -56,24 +57,42 @@ nodeMinusButton.addEventListener("click", function () {
   }
 });
 
-//Trying with TeamIndex
-// let TeamIndex =
+//If team has one li
 
+//Randomize functions
+// const randomName = Math.floor(Math.random() * names.length);
+//     const randomTeam = Math.floor(Math.random() * nodeTeamList.length);
+//Trying with TeamIndex to keep track of the last team that added a person
+// let teamIndex = 0;
+// nodeAssignButton.addEventListener("click", function () {
+//   if (arrayOfTeams > 0) {
+//     if (teamIndex === numberOfTeams) {
+//       teamIndex = 0;
+//     }
+// const randomName = Math.floor(Math.random() * names.length);
+// const randomTeam = Math.floor(Math.random() * nodeTeamList.length);
+//   arrayOfTeams[teamIndex].appendChild(names);
+//   teamIndex++;
+// }
+// });
+
+//Trying without Team Index
 nodeAssignButton.addEventListener("click", function () {
   if (number === 0) {
     alert("Please select a number of teams");
   } else if (names.length <= 0) {
     alert("Please add members to the list and press this button again");
   } else {
-    for (let i = 0; i < names.length; i++) {
-      if (nodeTeamList[1].length !== nodeTeamList[0].length) {
-        nodeTeamList[i].appendChild(names[i]);
-        //How can I set up the actual min-Height according to the numbers on <li> that are created
-      }
-      nodeTeamList[i].appendChild(names[i]);
-      nodeUl.style.minHeight = "300px";
-      nodeUl.removeChild(names);
+    const randomName = Math.floor(Math.random() * names.length);
+    const randomTeam = Math.floor(Math.random() * nodeTeamList.length);
+    for (let i = 0; i < nodeTeamList.length; i++) {
+      //How can I set up the actual min-Height according to the numbers on <li> that are created
+      // if (nodeTeamLists[i].length != nodeTeamLists[i].length)
+      nodeTeamList[i].appendChild(names[randomName]);
+      console.log(nodeTeamList[randomTeam]);
     }
+    nodeUl.style.minHeight = "200px";
+    nodeUl.removeChild(names);
   }
 });
 
